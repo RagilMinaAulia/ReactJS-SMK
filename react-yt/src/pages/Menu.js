@@ -1,6 +1,8 @@
 import {useState} from 'react';
+import Tabel from "./Tabel";
 
 function Menu() {
+    const title= "Daftar Menu Restoran";
     const [menus, setMenu] = useState(
         [
             {
@@ -42,12 +44,7 @@ function Menu() {
     );
     return (
       <div className="App">
-          <h1>Menu Restoran</h1>
-          <div>
-            {menus.map((data) => (
-                <li key= {data.idmenu}>{data.menu} Rp. {data.harga}</li>
-            ))}
-          </div>
+          <Tabel menu= {menus} title={title}/>
       </div>
     );
   }
