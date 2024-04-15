@@ -5,18 +5,22 @@ function Tabel(props) {
       <div className="App">
           <h1>{title}</h1>
           <div>
-            <table>
-                <tr>
-                    <th>Menu</th>
-                    <th>Harga</th>
-                </tr>
+            <table class="table table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Menu</th>
+                        <th>Harga</th>
+                    </tr>
+                </thead>
             
             
             {menus.map((data) => (
-                <tr key= {data.idmenu}>
-                    <td>{data.menu}</td>
-                    <td>{data.harga}</td>
-                </tr>
+                <thead class="table-light">
+                    <tr key= {data.idmenu}>
+                        <td>{data.menu}</td>
+                        <td>{data.harga}</td>
+                    </tr>
+                </thead>
             ))}
             </table>
           </div>
